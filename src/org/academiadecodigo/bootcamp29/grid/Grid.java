@@ -56,4 +56,34 @@ public class Grid {
         paintedSquare.fill();
 
     }
+
+    public void clearGrid () {
+        for (int i = 0; i<rows; i++) {
+
+            int line = i;
+
+            for (int j = 0; j<cols; j++){
+
+                int collumn = j;
+                Rectangle square = new Rectangle(PADDING+collumn*CELLSIZE, PADDING+line*CELLSIZE, CELLSIZE, CELLSIZE);
+                square.setColor(Color.WHITE);
+                square.fill();
+
+            }
+        }
+
+        for (int i = 0; i<rows; i++) {
+
+            int line = i;
+
+            for (int j = 0; j<cols; j++){
+
+                int collumn = j;
+                Rectangle square = new Rectangle(PADDING+collumn*CELLSIZE, PADDING+line*CELLSIZE, CELLSIZE, CELLSIZE);
+                square.setColor(Color.BLACK);
+                square.draw();
+
+            }
+        }
+    }
 }

@@ -39,7 +39,7 @@ public class GameKeyboard implements KeyboardHandler {
                 grid.paintGrid(cursor.getCol(), cursor.getRow());
                 break;
             case KeyboardEvent.KEY_C:
-                // clear grid;
+                grid.clearGrid();
                 break;
             case  KeyboardEvent.KEY_L:
                 // load grid;

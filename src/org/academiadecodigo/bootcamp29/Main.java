@@ -4,15 +4,6 @@ import org.academiadecodigo.bootcamp29.grid.Grid;
 
 public class Main {
 
-    /*
-
-    psvm
-    init
-    start
-
-     */
-
-
     public static void main(String[] args) {
 
 
