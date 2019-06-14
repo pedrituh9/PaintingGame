@@ -18,6 +18,6 @@ public class Main {
 
         Game g = new Game (18, 18);
         g.init();
-        //g.start();
+        g.start();
     }
 }

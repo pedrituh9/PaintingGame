@@ -32,15 +32,44 @@ public class Cursor {
 
     }
 
-    public void moveCursor() {
+    public void moveCursor(int cols, int rows) {
+
+        if (!isInLimit()) {
+            pointer.translate(cols * Grid.getCELLSIZE(), rows * Grid.getCELLSIZE());
+            col += cols;
+            row += rows;
+        }
 
     }
+
+
+    private boolean isInLimit () {
+        //boolean inLimit;
+
+        if (col == 0 || col == grid.getCols()-1) {
+            return true;
+        }
+
+        if (row == 0 || row == grid.getRows()-1) {
+            return true;
+        }
+
+        return false;
+    }
+
+
 
     public int getCol() {
         return col;
     }
 
+
     public int getRow() {
         return row;
+    }
+
+
+    public Rectangle getPointer() {
+        return pointer;
     }
 }
