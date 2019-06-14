@@ -11,7 +11,7 @@ public class Game {
 
 
     mets:
-    grid.init?
+    init ---> grid init
     start
 
 
