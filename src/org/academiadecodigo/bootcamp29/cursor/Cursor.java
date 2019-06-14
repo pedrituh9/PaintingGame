@@ -34,16 +34,30 @@ public class Cursor {
 
     public void moveCursor(int cols, int rows) {
 
-        if (!isInLimit()) {
+        /*if (!isInLimit()) {
+
             pointer.translate(cols * Grid.getCELLSIZE(), rows * Grid.getCELLSIZE());
             col += cols;
             row += rows;
+        }*/
+
+        if (cols + col < 0 || cols + col > grid.getCols()-1) {
+            return;
         }
+
+        if (rows + row < 0 || rows + row > grid.getRows()-1) {
+            return;
+        }
+
+        pointer.translate(cols * Grid.getCELLSIZE(), rows * Grid.getCELLSIZE());
+        col += cols;
+        row += rows;
+
 
     }
 
 
-    private boolean isInLimit () {
+    /*private boolean isInLimit () {
         //boolean inLimit;
 
         if (col == 0 || col == grid.getCols()-1) {
@@ -55,7 +69,7 @@ public class Cursor {
         }
 
         return false;
-    }
+    }*/
 
 
 
@@ -69,7 +83,7 @@ public class Cursor {
     }
 
 
-    public Rectangle getPointer() {
-        return pointer;
-    }
+    //public Rectangle getPointer() {
+        //return pointer;
+    //}
 }

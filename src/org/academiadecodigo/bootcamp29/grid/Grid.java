@@ -51,7 +51,9 @@ public class Grid {
 
     public void paintGrid(int col, int row) {
 
-
+        Rectangle paintedSquare = new Rectangle(col*CELLSIZE+PADDING, row*CELLSIZE+PADDING, CELLSIZE, CELLSIZE);
+        paintedSquare.setColor(Color.BLACK);
+        paintedSquare.fill();
 
     }
 }
