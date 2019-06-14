@@ -1,13 +1,12 @@
 package org.academiadecodigo.bootcamp29.cursor;
 
 import org.academiadecodigo.bootcamp29.grid.Grid;
+import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
 public class Cursor {
     /*
 
-    vai ter uma grid
-    vai ser um rectangle
 
     mets:
     mover
@@ -25,9 +24,11 @@ public class Cursor {
     public Cursor (Grid grid) {
 
         this.grid = grid;
-        col = (int) (Math.random()*((grid.getCols()+1)));
-        row = (int) (Math.random()*((grid.getRows()+1)));
-        pointer = new Rectangle(Grid.PADDING+col, Grid.PADDING+row, Grid.getCELLSIZE(), Grid.getCELLSIZE());
+        col = (int) (Math.random()*((grid.getCols())));
+        row = (int) (Math.random()*((grid.getRows())));
+        pointer = new Rectangle(Grid.PADDING+(col*Grid.getCELLSIZE()), Grid.PADDING+(row*Grid.getCELLSIZE()), Grid.getCELLSIZE(), Grid.getCELLSIZE());
+        pointer.setColor(Color.PINK);
+        pointer.fill();
 
     }
 
@@ -35,6 +36,11 @@ public class Cursor {
 
     }
 
+    public int getCol() {
+        return col;
+    }
 
-
+    public int getRow() {
+        return row;
+    }
 }

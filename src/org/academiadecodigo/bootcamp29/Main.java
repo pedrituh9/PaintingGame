@@ -14,7 +14,10 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Grid g = new Grid(18, 18);
+
+
+        Game g = new Game (18, 18);
         g.init();
+        //g.start();
     }
 }

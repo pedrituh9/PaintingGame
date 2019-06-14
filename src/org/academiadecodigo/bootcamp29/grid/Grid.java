@@ -8,27 +8,6 @@ import java.awt.*;
 
 public class Grid {
 
-    /*
-
-    criar uma grid c simple gfx
-
-    padding?
-    cell size
-    cols rows
-    desenhar linhas
-
-
-    definir tamanho do background (linhas traçadas)
-
-
-    mets:
-    init
-    gets rows, cols, hweight, width, cell size, x(?), y(?)
-
-    row e col to pixel
-
-    criar cursor
-     */
 
     private int cols;
     private int rows;
@@ -39,7 +18,6 @@ public class Grid {
 
         this.rows = rows;
         this.cols = cols;
-        Cursor cursor = new Cursor(this);
 
     }
 
@@ -71,7 +49,9 @@ public class Grid {
         return rows;
     }
 
-    public void paintGrid() {
+    public void paintGrid(int col, int row) {
+
+
 
     }
 }
