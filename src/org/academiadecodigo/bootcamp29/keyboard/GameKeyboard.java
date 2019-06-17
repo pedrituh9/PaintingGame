@@ -5,6 +5,8 @@ import org.academiadecodigo.bootcamp29.grid.Grid;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 
+import java.io.IOException;
+
 public class GameKeyboard implements KeyboardHandler {
 
     private Cursor cursor;
@@ -40,12 +42,18 @@ public class GameKeyboard implements KeyboardHandler {
                 break;
             case KeyboardEvent.KEY_C:
                 grid.clearGrid();
+                cursor.setCursor();
+                grid.init();
                 break;
             case  KeyboardEvent.KEY_L:
                 // load grid;
                 break;
             case KeyboardEvent.KEY_S:
-                // save grid;
+                try {
+                    grid.saveGrid();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
 
         }

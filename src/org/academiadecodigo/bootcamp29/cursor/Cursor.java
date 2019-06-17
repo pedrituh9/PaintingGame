@@ -56,6 +56,12 @@ public class Cursor {
 
     }
 
+    public void setCursor () {
+        pointer.delete();
+        pointer.setColor(Color.PINK);
+        pointer.fill();
+    }
+
 
     /*private boolean isInLimit () {
         //boolean inLimit;
